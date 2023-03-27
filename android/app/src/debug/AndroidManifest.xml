@@ -4,5 +4,27 @@
          the Flutter tool needs it to communicate with the running application
          to allow setting breakpoints, to provide hot reload, etc.
     -->
+    <application>
+        .
+        .
+        .
+        <activity
+            android:name="com.kakao.sdk.flutter.AuthCodeCustomTabsActivity"
+            android:exported="true">
+            <intent-filter android:label="flutter_web_auth">
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <!-- Redirect URI, "kakao${YOUR_NATIVE_APP_KEY}://oauth" 형식 -->
+                <data android:scheme="9c267c2ab14351a2291bb16bbceacab0" android:host="oauth"/>
+            </intent-filter>
+        </activity>
+
+        .
+        .
+        .
+    </application>
+
     <uses-permission android:name="android.permission.INTERNET"/>
 </manifest>
